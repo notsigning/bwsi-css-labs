@@ -28,7 +28,7 @@ def test_division():
     assert simple_calculator("divide", 5, 2) == 2.5     # Test for division resulting in float
 
 def test_division_by_zero():
-    with pytest.raises(ValueError, match="Cannot divide by zero."):
+    with pytest.raises(ZeroDivisionError,match="Please select a different operation/second value"):
         simple_calculator("divide", 5, 0)               # Test division by zero
 
 def test_invalid_operation():
